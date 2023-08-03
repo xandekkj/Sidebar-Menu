@@ -51,6 +51,14 @@ body {
     background: var(--sidebar-color);
 }
 
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
 .sidebar header {
     position: relative;
 }
