@@ -59,6 +59,19 @@ body {
     align-items: center;
 }
 
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon
+.sidebar li .text {
+    color: var(--text-color);
+}
+
 .sidebar header {
     position: relative;
 }
@@ -100,4 +113,11 @@ header .image-text .header-text {
     border-radius: 50%;
     color: var(--sidebar-color);
     font-size: 22px;
+}
+
+.sidebar li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
