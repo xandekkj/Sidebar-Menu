@@ -130,6 +130,17 @@ header .image-text .header-text {
     background: var(--primary-color-light);
 }
 
+.search-box label {
+    position: absolute;
+    left: 73px;
+    transition: top .3s;
+    pointer-events: none;
+}
+
+.search-box input:focus ~ label {
+    top: 75px;
+}
+
 .sidebar li a {
     height: 100%;
     width: 100%;
