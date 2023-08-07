@@ -47,6 +47,11 @@ body.dark {
     width: 250px;
     padding: 10px 14px;
     background: var(--sidebar-color);
+    transition: var(--tran-05);
+}
+
+.sidebar.close {
+    width: 85px;
 }
 
 /* ===== Reusable CSS ===== */
@@ -54,6 +59,13 @@ body.dark {
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
+    transition: var(--tran-04);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close  .text{
+   opacity: 0;
 }
 
 .sidebar .image {
@@ -94,6 +106,7 @@ body.dark {
 }
 
 .sidebar header .image-text {
+    gap: 15px;
     display: flex;
     align-items: center;
 }
@@ -114,8 +127,8 @@ header .image-text .header-text {
 .sidebar header .toggle {
     position: absolute;
     top: 50%;
-    right: -25px;
-    transform: translateY(-50%);
+    right: -35px;
+    transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
     background: var(--primary-color);
@@ -125,10 +138,20 @@ header .image-text .header-text {
     border-radius: 50%;
     color: var(--sidebar-color);
     font-size: 22px;
+    transition: var(--tran-03);
+}
+
+.sidebar.close header .toggle {
+    transform: translateY(-50%);
+}
+
+body.dark .sidebar header .toggle {
+    color: var(--text-color);
 }
 
 .sidebar .search-box {
     background: var(--primary-color-light);
+    border-radius: 6px;
 }
 
 .search-box input {
@@ -136,8 +159,8 @@ header .image-text .header-text {
     width: 100%;
     outline: none;
     border: none;
-    border-radius: 6px;
     background: var(--primary-color-light);
+    border-radius: 6px;
 }
 
 .search-box label {
@@ -170,6 +193,11 @@ header .image-text .header-text {
     color: var(--sidebar-color);
 }
 
+.body.dark li a:hover .icon,
+.body.dark li a:hover .text {
+    color: var(--text-color);
+}
+
 .sidebar .menu-bar {
     height: calc(100% - 50px);
     display: flex;
@@ -178,6 +206,8 @@ header .image-text .header-text {
 }
 
 .menu-bar .mode {
+    position: relative;
+    border-radius: 6px;
     background: var(--primary-color-light);
 }
 
@@ -197,11 +227,15 @@ header .image-text .header-text {
 }
 
 .menu-bar .mode .toggle-switch {
+    position: absolute;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     min-width: 60px;
+    border-radius: 6px;
+    background: var(--primary-color-light);
 }
 
 .toggle-switch .switch {
